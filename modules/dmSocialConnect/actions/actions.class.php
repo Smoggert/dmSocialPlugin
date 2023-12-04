@@ -10,4 +10,8 @@ class dmSocialConnectActions extends myFrontModuleActions
       $this->getUser()->socialConnect($service);
     }
 
+    public function executeLobbi(dmWebRequest $request)
+    {
+        $this->me = $this->getUser()->getNetwork('lobbi')->getMe();
+    }
 }
